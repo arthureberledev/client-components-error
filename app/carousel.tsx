@@ -21,6 +21,7 @@ export const Carousel: Carousel = ({ children, ...props }: CarouselProps) => {
 
 type CarouselPaginationProps = HTMLAttributes<HTMLDivElement> & {};
 
+// Using this throws error
 Carousel.Pagination = function CarouselPagination({
   children,
   className,
@@ -33,6 +34,7 @@ Carousel.Pagination = function CarouselPagination({
   );
 };
 
+// This will not
 export const CarouselPagination = ({ children, className, ...props }: CarouselPaginationProps) => {
   return (
     <div className="carousel-pagination" {...props}>
